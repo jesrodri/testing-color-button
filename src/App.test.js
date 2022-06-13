@@ -35,7 +35,7 @@ test('button starts out enabled', () => {
 
 test('checkbox starts out unchecked', () => {
   render(<App />);
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name: /disable button/i });
   expect(checkbox).not.toBeChecked();
 });
 
